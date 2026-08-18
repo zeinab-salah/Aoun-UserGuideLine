@@ -1,0 +1,235 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>دليل مستخدم نظام عون</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Tajawal:wght@400;500;700;800&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --navy: #1f3a8a;
+      --navy-dark: #0f1b3d;
+      --gold: #b48a3a;
+      --bg: #f1f5f9;
+      --card: #ffffff;
+      --text: #111827;
+      --muted: #4b5563;
+      --border: #e2e8f0;
+    }
+    * { box-sizing: border-box; }
+    html { scroll-behavior: smooth; }
+    body {
+      margin: 0;
+      font-family: "Tajawal", Tahoma, Arial, sans-serif;
+      background: var(--bg);
+      color: var(--text);
+      line-height: 1.85;
+      font-size: 17px;
+    }
+    .hero {
+      background: linear-gradient(145deg, #0f1b3d 0%, #1f3a8a 55%, #2d5fba 100%);
+      color: #fff;
+      padding: 56px 32px 48px;
+    }
+    .hero-inner { max-width: 1100px; margin: 0 auto; }
+    .badge {
+      display: inline-block;
+      background: rgba(255,255,255,.12);
+      border: 1px solid rgba(255,255,255,.2);
+      border-radius: 999px;
+      padding: 4px 14px;
+      font-size: 13px;
+      margin-bottom: 16px;
+    }
+    .hero h1 { margin: 0 0 8px; font-size: 40px; font-weight: 800; }
+    .hero .sub { margin: 0; opacity: .9; font-size: 18px; }
+    .hero .en { margin: 8px 0 0; opacity: .7; font-size: 14px; direction: ltr; text-align: right; }
+    .layout {
+      max-width: 1180px;
+      margin: -28px auto 64px;
+      padding: 0 20px;
+      display: grid;
+      grid-template-columns: 280px 1fr;
+      gap: 24px;
+      align-items: start;
+    }
+    nav.toc {
+      position: sticky;
+      top: 16px;
+      background: var(--card);
+      border: 1px solid var(--border);
+      border-radius: 16px;
+      padding: 18px 10px 18px 14px;
+      box-shadow: 0 8px 24px rgba(15,23,42,.06);
+    }
+    nav.toc h2 {
+      margin: 0 8px 10px;
+      font-size: 14px;
+      color: var(--navy);
+    }
+    nav.toc a {
+      display: block;
+      padding: 7px 10px;
+      color: var(--muted);
+      text-decoration: none;
+      border-radius: 8px;
+      font-size: 14px;
+    }
+    nav.toc a:hover { background: #eef2ff; color: var(--navy); }
+    main {
+      background: var(--card);
+      border: 1px solid var(--border);
+      border-radius: 16px;
+      padding: 36px 40px 56px;
+      box-shadow: 0 8px 24px rgba(15,23,42,.06);
+    }
+    section { padding: 8px 0 28px; border-bottom: 1px solid var(--border); }
+    section:last-child { border-bottom: 0; }
+    h2 { color: var(--navy); font-size: 26px; margin: 12px 0 12px; }
+    h3 { color: #1e3a8a; font-size: 18px; margin: 22px 0 8px; }
+    p { margin: 0 0 12px; }
+    ul, ol { margin: 0 0 14px; padding-right: 22px; }
+    ol.steps li { margin-bottom: 8px; }
+    figure {
+      margin: 18px 0 8px;
+      background: #0f172a08;
+      border: 1px solid var(--border);
+      border-radius: 12px;
+      overflow: hidden;
+    }
+    figure img { width: 100%; display: block; }
+    figcaption {
+      padding: 10px 14px;
+      font-size: 13px;
+      color: var(--muted);
+      background: #f8fafc;
+    }
+    .callout {
+      background: #eef4ff;
+      border: 1px solid #c7d7fe;
+      border-right: 4px solid var(--navy);
+      border-radius: 10px;
+      padding: 12px 16px;
+      margin: 14px 0 18px;
+    }
+    .callout p { margin: 6px 0 0; }
+    .table-wrap { overflow-x: auto; margin: 12px 0 18px; }
+    table { width: 100%; border-collapse: collapse; font-size: 15px; }
+    th, td { border: 1px solid var(--border); padding: 10px 12px; text-align: right; vertical-align: top; }
+    th { background: #1f3a8a; color: #fff; }
+    tr:nth-child(even) td { background: #f8fafc; }
+    footer {
+      max-width: 1180px;
+      margin: 0 auto 40px;
+      padding: 0 20px;
+      color: var(--muted);
+      font-size: 13px;
+      text-align: center;
+    }
+    @media (max-width: 960px) {
+      .layout { grid-template-columns: 1fr; }
+      nav.toc { position: static; }
+      main { padding: 24px 18px 40px; }
+      .hero h1 { font-size: 30px; }
+    }
+    @media print {
+      nav.toc { display: none; }
+      .layout { display: block; margin: 0; }
+      main { box-shadow: none; border: 0; }
+      .hero { -webkit-print-color-adjust: exact; print-color-adjust: exact; }
+      section { break-inside: avoid; }
+    }
+  </style>
+</head>
+<body>
+  <header class="hero">
+    <div class="hero-inner">
+      <div class="badge">أغسطس 2026</div>
+      <h1>دليل مستخدم نظام عون</h1>
+      <p class="sub">نظام الدعم الفني — من إنشاء الطلب حتى حل المشكلة</p>
+      <p class="en">Aoun Technical Support System — User Guide</p>
+    </div>
+  </header>
+  <div class="layout">
+    <nav class="toc" aria-label="فهرس المحتويات">
+      <h2>المحتويات</h2>
+      <a href="#intro">1. مقدمة ومسار العمل</a>
+<a href="#dashboard">2. لوحة التحكم</a>
+<a href="#create">3. إنشاء الطلب (مدخل البيانات)</a>
+<a href="#edit">4. تعديل الطلب</a>
+<a href="#send">5. إرسال الطلب للاعتماد</a>
+<a href="#approve">6. اعتماد الطلب (المعتمد)</a>
+<a href="#execute">7. التنفيذ بعد الاعتماد (المنفذون)</a>
+<a href="#comments">8. التعليقات</a>
+<a href="#attachments">9. المرفقات</a>
+<a href="#activity">10. النشاط والحركات — متابعة الطلب</a>
+<a href="#faq">11. أسئلة شائعة</a>
+    </nav>
+    <main>
+      <section id="intro"><h2>1. مقدمة ومسار العمل</h2>
+<p>نظام عون لإدارة طلبات الدعم الفني. المسار الأساسي بسيط: مدخل البيانات ينشئ الطلب ويعدّله ثم يرسله، المعتمد يراجعه ويعتمده أو يرفضه، وبعد الاعتماد يُرسل الطلب إلى المنفذين لحل المشكلة. أثناء ذلك يمكن لمدخل البيانات والمعتمد إضافة تعليقات ومرفقات، ويتابع المستخدم حركة طلبه من تبويب النشاط.</p>
+<div class="table-wrap"><table><thead><tr><th>المرحلة</th><th>من يقوم بها</th><th>ماذا يحدث</th></tr></thead><tbody><tr><td>1. الإنشاء والتعديل</td><td>مدخل البيانات (مدخل طلب)</td><td>إنشاء الطلب، تعديله وهو مسودة، ثم إرساله للاعتماد.</td></tr><tr><td>2. الاعتماد</td><td>المعتمد (معتمد طلب)</td><td>مراجعة الطلب ثم اعتماده أو رفضه وإرجاعه لمدخل البيانات.</td></tr><tr><td>3. التنفيذ</td><td>المنفذون</td><td>بعد الاعتماد يصل الطلب للمنفذين لمعالجة المشكلة وإغلاقها.</td></tr><tr><td>التواصل والمتابعة</td><td>مدخل البيانات والمعتمد</td><td>إضافة تعليقات ومرفقات، ومتابعة الحركات من تبويب النشاط.</td></tr></tbody></table></div>
+<aside class="callout"><strong>الدور النشط</strong><p>إذا كان لحسابك أكثر من دور، اختر الدور من قائمة «الدور النشط» في الشريط العلوي قبل العمل. صلاحيات الأزرار تتغير حسب الدور المختار (مثلاً: مدخل طلب أو معتمد طلب).</p></aside>
+</section><section id="dashboard"><h2>2. لوحة التحكم</h2>
+<p>بعد الدخول تظهر لوحة التحكم. من هنا يبدأ مدخل البيانات يومه: يرى إحصاءات الطلبات حسب الحالة، وآخر الطلبات، وينشئ طلباً جديداً من الزر الأزرق «طلب جديد».</p>
+<ul><li>زر «+ طلب جديد» في الشريط العلوي لفتح نموذج الإنشاء.</li><li>بطاقات الإحصاء (إجمالي، مسودة، جديد، ملغي، تم التنفيذ، معتمد، معلّق…). اضغط البطاقة لعرض الطلبات في تلك الحالة.</li><li>جدول «أحدث طلبات الدعم الفني»: الرقم، النظام، التطبيق، نوع الطلب، العنوان، الحالة، المنشئ، وتاريخ الإنشاء.</li><li>أيقونة العين في عمود «الإجراء» تفتح صفحة تفاصيل الطلب لمتابعته.</li><li>جرس الإشعارات واسم المستخدم يظهران في يسار الشريط العلوي.</li></ul>
+<figure><img src="images/MainPage.png" alt="لوحة التحكم لدور مدخل طلب — الإحصاءات وآخر الطلبات وزر طلب جديد"><figcaption>لوحة التحكم لدور مدخل طلب — الإحصاءات وآخر الطلبات وزر طلب جديد</figcaption></figure>
+</section><section id="create"><h2>3. إنشاء الطلب (مدخل البيانات)</h2>
+<p>مدخل البيانات هو من ينشئ الطلب. اضغط «+ طلب جديد» في أعلى الشاشة. تفتح نافذة من خطوتين: المعلومات الأساسية ثم المراجعة.</p>
+<h3>الخطوة 1 — المعلومات الأساسية</h3>
+<ol class="steps"><li>اختر النظام (مثل نظام التدفقات الرأسمالية).</li><li>اختر التطبيق (مثل: عام).</li><li>اختر نوع البلاغ.</li><li>اكتب عنواناً واضحاً يصف المشكلة.</li><li>اكتب وصفاً تفصيلياً يساعد المعتمد والمنفّذ على فهم المطلوب.</li><li>اضغط «التالي». زر «السابق» يكون معطّلاً في هذه الخطوة.</li></ol>
+<figure><img src="images/newIncident.png" alt="نافذة طلب دعم فني جديد — خطوة المعلومات الأساسية"><figcaption>نافذة طلب دعم فني جديد — خطوة المعلومات الأساسية</figcaption></figure>
+<h3>الخطوة 2 — المراجعة والإرسال</h3>
+<p>تظهر رسالة «جاهز للإرسال». راجع النظام والتطبيق ونوع البلاغ والعنوان والوصف. إن احتجت تصحيحاً اضغط «السابق». إذا كانت البيانات صحيحة اضغط «إرسال البلاغ». يُحفظ الطلب ويمكن لاحقاً إكماله من صفحة التفاصيل إن بقي مسودة.</p>
+<figure><img src="images/newIncident2.png" alt="مراجعة بيانات الطلب قبل الضغط على إرسال البلاغ"><figcaption>مراجعة بيانات الطلب قبل الضغط على إرسال البلاغ</figcaption></figure>
+</section><section id="edit"><h2>4. تعديل الطلب</h2>
+<p>ما دام الطلب مسودة (لم يُرسل بعد)، يستطيع مدخل البيانات تعديله. من صفحة التفاصيل اضغط «تعديل». تفتح نافذة «تعديل طلب الدعم الفني» بنفس الحقول: النظام، التطبيق، نوع الطلب، العنوان، والوصف.</p>
+<ol class="steps"><li>افتح الطلب من لوحة التحكم (أيقونة العين).</li><li>اضغط زر «تعديل».</li><li>صحّح الحقول المطلوبة.</li><li>اضغط «التالي» للمراجعة ثم احفظ.</li></ol>
+<figure><img src="images/EditPage.png" alt="تعديل طلب وهو ما زال في حالة مسودة"><figcaption>تعديل طلب وهو ما زال في حالة مسودة</figcaption></figure>
+<aside class="callout"><strong>متى يمكن التعديل؟</strong><p>التعديل متاح للمسودة، أو إذا رفض المعتمد الطلب وأرجعه لمدخل البيانات. بعد الاعتماد وبدء التنفيذ لا يُعدَّل الطلب عادة من المدخل.</p></aside>
+</section><section id="send"><h2>5. إرسال الطلب للاعتماد</h2>
+<p>بعد الإنشاء يظهر الطلب في صفحة التفاصيل بحالة «مسودة»، مع شريط يوضح أن الطلب محفوظ ولم يُرسل بعد. من هنا يرسله مدخل البيانات ليصل إلى المعتمد.</p>
+<figure><img src="images/Detailspage.png" alt="صفحة تفاصيل الطلب في حالة مسودة — تعديل، إرسال، تعليقات ومرفقات ونشاط"><figcaption>صفحة تفاصيل الطلب في حالة مسودة — تعديل، إرسال، تعليقات ومرفقات ونشاط</figcaption></figure>
+<h3>كيف ترسل الطلب</h3>
+<ol class="steps"><li>في شريط الإجراءات اختر الإجراء «إرسال إلى موزع طلبات».</li><li>اضغط زر «تنفيذ».</li><li>ستظهر نافذة «تأكيد الإجراء».</li><li>اضغط «تنفيذ» للتأكيد أو «إلغاء» للرجوع.</li></ol>
+<figure><img src="images/Workflow.png" alt="اختيار إجراء الإرسال من قائمة الإجراءات ثم الضغط على تنفيذ"><figcaption>اختيار إجراء الإرسال من قائمة الإجراءات ثم الضغط على تنفيذ</figcaption></figure>
+<figure><img src="images/sendaction.png" alt="تأكيد إجراء «إرسال إلى موزع طلبات» قبل تحويل الطلب للاعتماد"><figcaption>تأكيد إجراء «إرسال إلى موزع طلبات» قبل تحويل الطلب للاعتماد</figcaption></figure>
+<p>بعد التأكيد تتغيّر الحالة من مسودة إلى جديد، ويصبح الطلب قيد مراجعة الجهة المختصة (المعتمد). يمكن لمدخل البيانات متابعة ذلك من تبويب النشاط.</p>
+</section><section id="approve"><h2>6. اعتماد الطلب (المعتمد)</h2>
+<p>المعتمد يفتح الطلب بعد إرساله. يظهر الدور في الشريط العلوي مثل «معتمد طلب». الحالة تكون «جديد»، والشريط يوضح أن الطلب أُرسل وهو قيد المراجعة.</p>
+<ul><li>اقرأ تفاصيل الطلب في اللوحة اليمنى: التطبيق، الوحدة، نوع الطلب، الوصف، وصاحب الطلب.</li><li>راجع التعليقات والمرفقات إن وُجدت.</li><li>افتح تبويب النشاط لمعرفة من أرسل الطلب ومتى.</li><li>من قائمة الإجراءات اختر «اعتماد إلى موزع طلبات» ثم اضغط «تنفيذ» لاعتماد الطلب.</li><li>أو اختر رفض/إرجاع إلى مدخل الطلب إذا كانت البيانات ناقصة أو غير صحيحة.</li></ul>
+<figure><img src="images/ForApproval.png" alt="شاشة المعتمد — اعتماد أو رفض الطلب، مع تبويب النشاط لمتابعة الحركات"><figcaption>شاشة المعتمد — اعتماد أو رفض الطلب، مع تبويب النشاط لمتابعة الحركات</figcaption></figure>
+<aside class="callout"><strong>بعد الاعتماد</strong><p>عند اعتماد الطلب يُرسل إلى المنفذين ليباشروا حل المشكلة. صاحب الطلب يتابع التقدّم من الحالة في لوحة التحكم ومن تبويب النشاط داخل الطلب.</p></aside>
+</section><section id="execute"><h2>7. التنفيذ بعد الاعتماد (المنفذون)</h2>
+<p>بعد أن يعتمد المعتمد الطلب، ينتقل إلى المنفذين. المنفّذ يعالج المشكلة على النظام المعني ثم يغلق الطلب أو يحدّث حالته إلى «تم التنفيذ».</p>
+<ul><li>مدخل البيانات لا ينفّذ الحل بنفسه بعد الإرسال؛ دوره الإنشاء والتعديل والإرسال والمتابعة.</li><li>المعتمد يقرر الاعتماد أو الإرجاع قبل وصول الطلب للمنفذين.</li><li>المنفذون هم من يحلّون المشكلة بعد الاعتماد.</li><li>يمكن متابعة النتيجة من بطاقات لوحة التحكم (معتمد، تم التنفيذ، معلّق…) ومن تبويب النشاط.</li></ul>
+</section><section id="comments"><h2>8. التعليقات</h2>
+<p>مدخل البيانات والمعتمد يستطيعان إضافة تعليقات على الطلب للتوضيح أو طلب معلومة. من صفحة التفاصيل اختر تبويب «التعليقات» ثم اضغط «+ تعليق».</p>
+<ol class="steps"><li>افتح الطلب ثم تبويب التعليقات.</li><li>اضغط «+ تعليق».</li><li>اختر نوع التعليق (مثل: شرح الطلب).</li><li>اكتب نص التعليق.</li><li>اضغط «حفظ».</li></ol>
+<figure><img src="images/comment.png" alt="إضافة تعليق على الطلب من دور المعتمد (نفس النافذة متاحة لمدخل البيانات)"><figcaption>إضافة تعليق على الطلب من دور المعتمد (نفس النافذة متاحة لمدخل البيانات)</figcaption></figure>
+</section><section id="attachments"><h2>9. المرفقات</h2>
+<p>يمكن لمدخل البيانات والمعتمد إرفاق ملفات توضّح المشكلة أو تدعم القرار (مستند، تقرير فني، سجل أخطاء، أو صورة من الشاشة).</p>
+<ol class="steps"><li>من صفحة التفاصيل افتح تبويب «المرفقات».</li><li>اضغط زر «مرفق».</li><li>اختر نوع المرفق.</li><li>اختر الملف من جهازك.</li><li>اضغط «رفع».</li></ol>
+<figure><img src="images/Attachments.png" alt="نافذة إضافة مرفق — اختيار النوع ثم رفع الملف"><figcaption>نافذة إضافة مرفق — اختيار النوع ثم رفع الملف</figcaption></figure>
+</section><section id="activity"><h2>10. النشاط والحركات — متابعة الطلب</h2>
+<p>تبويب «النشاط» يسجّل كل حركة على الطلب حتى يتمكن المستخدم من متابعة طلبه دون سؤال الفريق في كل مرة. يظهر فيه التاريخ، التحويل من حالة إلى حالة، من نفّذ الإجراء، تحول الأدوار (مثلاً من مدخل طلب إلى موزع طلبات)، واسم الإجراء.</p>
+<ul><li>مثال: تحويل من مسودة إلى جديد عند الإرسال.</li><li>يظهر اسم المنفّذ للإجراء (من ضغط تنفيذ).</li><li>عمود تحول الأدوار يوضح انتقال المسؤولية بين مدخل البيانات والمعتمد ثم المنفذين.</li><li>بعد كل اعتماد أو رفض تُضاف حركة جديدة هنا.</li></ul>
+<figure><img src="images/ForApproval.png" alt="تبويب النشاط: سجل الحركات التي تمت على الطلب لمتابعة مساره"><figcaption>تبويب النشاط: سجل الحركات التي تمت على الطلب لمتابعة مساره</figcaption></figure>
+<aside class="callout"><strong>أين أتابع طلبي؟</strong><p>من لوحة التحكم انظر حالة الطلب في الجدول أو البطاقات، أو افتح الطلب واضغط تبويب النشاط لمعرفة آخر إجراء ومن قام به.</p></aside>
+</section><section id="faq"><h2>11. أسئلة شائعة</h2>
+<h3>لا أرى زر طلب جديد</h3><p>الزر يظهر لدور مدخل طلب. تأكد أن «الدور النشط» في الشريط العلوي هو مدخل طلب.</p>
+<h3>أنشأت الطلب لكن لم يصل للمعتمد</h3><p>الطلب يبقى مسودة حتى تضغط «تنفيذ» على إجراء الإرسال وتؤكده. راجع الحالة في صفحة التفاصيل.</p>
+<h3>لا أستطيع التعديل</h3><p>التعديل لمدخل البيانات وهو مسودة أو بعد رفض المعتمد. بعد الاعتماد ينتقل العمل للمنفذين.</p>
+<h3>ماذا يفعل المعتمد؟</h3><p>يراجع الطلب ثم يعتمد إلى المسار التالي أو يرفضه إلى مدخل الطلب مع إمكانية كتابة تعليق أو إرفاق ملف يوضح السبب.</p>
+<h3>متى يصل الطلب للمنفذين؟</h3><p>بعد اعتماد المعتمد. المنفذون هم من يحلّون المشكلة.</p>
+<h3>كيف أضيف مرفقاً أو تعليقاً؟</h3><p>من صفحة التفاصيل: تبويب التعليقات أو المرفقات. متاح لمدخل البيانات والمعتمد.</p>
+<h3>كيف أتابع حركة الطلب؟</h3><p>افتح الطلب ثم تبويب النشاط. ستجد كل تحويل حالة والإجراء ومن قام به.</p>
+</section>
+    </main>
+  </div>
+  <footer>
+    دليل مستخدم نظام عون — نظام الدعم الفني — من إنشاء الطلب حتى حل المشكلة — أغسطس 2026
+  </footer>
+</body>
+</html>
